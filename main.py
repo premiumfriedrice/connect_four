@@ -1,3 +1,6 @@
+#documents: https://docs.google.com/document/d/1njwlq9zclrLvaVW-G2yTwSFUUU_MBUfYH4QYQueMIfg/edit
+
+#miro flowchart: https://miro.com/app/board/uXjVPjheU_c=/
 import re
 
 isGood = True
