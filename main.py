@@ -20,18 +20,18 @@ def greet():
 def display_board():#prints board
   for row in board:
     print(row)
-  print("  1    2    3    4    5    6  ")#easier to use for player
+  print("  1    2    3    4    5    6  ") #easier to use for player
 
 
 def player1_selection(): #function for player selection of desired column
-  player1_choice = input("\nPlayer 1: ")
+  player1_choice = int(input("\nPlayer 1: "))
   print("")
   print("------------------------------")
   print("")
   if player1_choice == "1": #player choice for move 
     for row in reversed(board):
       if row[0] == " ":
-        row.pop(0)#REMOVES INDEX 0 
+        row.pop(0) #REMOVES INDEX 0 
         row.insert(0, "X") #INSERTS X INTO INDEX
         display_board()
         break
@@ -78,7 +78,7 @@ def player1_selection(): #function for player selection of desired column
   check()
         
 def player2_selection():
-  player2_choice = input("\nPlayer 2: ")
+  player2_choice = int(input("\nPlayer 2: "))
   print("")
   print("------------------------------")
   print("")
@@ -129,7 +129,20 @@ def player2_selection():
         row.insert(5, "O")
         display_board()
         break
+  check()
 
+#def player2_selection():
+  #player2_choice = int(input("\nPlayer 2: "))
+  #print("")
+  #print("------------------------------")
+  #print("")
+  #if player2_choice > 0 or player2_choice < 7:
+    #for row in reversed(board):
+      #if row[player2_choice] == " ":
+        #row.pop(player2_choice - 1), row.insert(player2_choice - 1, "O")
+        #display_board()
+        #break
+  #check()
 
 def gameplay():
   global isGood
